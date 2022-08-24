@@ -12,7 +12,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-        <maven.compiler.version>3.1</maven.compiler.version>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <spring.boot.version>2.5.4</spring.boot.version>
         <fastjson2.version>2.0.12</fastjson2.version>
@@ -24,6 +24,7 @@
         <easyexcel.version>3.1.1</easyexcel.version>
         <sentinel.version>1.8.5</sentinel.version>
         <apache.commons.io.version>2.4</apache.commons.io.version>
+        <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -149,6 +150,12 @@
                 <version>${sentinel.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+
 
 
         </dependencies>
@@ -213,6 +220,13 @@
                     <target>${maven.compiler.target}</target>
                     <encoding>${maven.compiler.encoding}</encoding>
                     <debug>true</debug>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -255,7 +269,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -284,6 +297,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>
