@@ -27,6 +27,8 @@
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
         <fast.json.version>2.0.12</fast.json.version>
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <pagehelper-spring-boot-starter.version>1.4.3</pagehelper-spring-boot-starter.version>
+        <mybatis-spring-boot-starter.version>2.2.1</mybatis-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -70,6 +72,13 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>
