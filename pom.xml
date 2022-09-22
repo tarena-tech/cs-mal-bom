@@ -29,6 +29,7 @@
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <pagehelper-spring-boot-starter.version>1.4.3</pagehelper-spring-boot-starter.version>
         <mybatis-spring-boot-starter.version>2.2.1</mybatis-spring-boot-starter.version>
+        <rocketmq-spring-boot-starte.version>2.2.2</rocketmq-spring-boot-starte.version>
     </properties>
 
     <dependencyManagement>
@@ -165,7 +166,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-mapstruct-binding</artifactId>
                 <version>${lombok-mapstruct-binding.version}</version>
-                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${org.mapstruct.version}</version>
             </dependency>
 
 
@@ -175,7 +181,12 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
-
+            <!--add dependency in pom.xml-->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring-boot-starte.version}</version>
+            </dependency>
 
 
         </dependencies>
